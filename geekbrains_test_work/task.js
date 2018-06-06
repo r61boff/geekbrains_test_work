@@ -1,4 +1,8 @@
-var str=process.argv[2], str2;
+var tp = typeof process.argv[3];
+switch (tp){
+case 'undefined': var str=process.argv[2], str2;
 str=str.replace(/[!.?,:;\n\s]/g,"").toLowerCase();
 str2=str.split("").reverse().join("");
 console.log((str===str2)?"YES":"NO");
+break;
+}
